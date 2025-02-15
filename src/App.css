@@ -1,0 +1,243 @@
+.main {
+  min-width: 300px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.news-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+}
+
+.news-feed__item {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.news {
+  width: 100%;
+}
+
+.news__header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.news__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.news__source {
+  margin: 0;
+  font-size: 0.84rem;
+  color: #329cff;
+  cursor: pointer;
+}
+
+.news__data {
+  font-size: 0.74rem;
+  text-shadow: 0 0 1px #d3d3d3;
+}
+
+.news__menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  font-size: 1.6rem;
+  line-height: 0.7;
+  text-align: center;
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.news__text {
+  font-size: 0.83rem;
+  line-height: 1.5;
+  color: #4e4e4e;
+  overflow-wrap: break-word;
+}
+
+.news__content {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  border: 1px solid #e9e9e9;
+  border-radius: 3px;
+}
+
+.news__image {
+  display: block;
+  width: 100%;
+  height: 260px;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+.news-image-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  border: 8px solid #e9e9e9;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.news-image-content__title {
+  margin: 0;
+  padding: 0 15px;
+  font-size: 1.55rem;
+  color: #ffffff;
+  transform: scaleY(1.3);
+}
+
+.news-image-content__description {
+  padding: 0 20px;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.news-image-content__details-btn {
+  position: relative;
+  margin-top: 10px;
+  padding: 7px 15px 7px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  color: #000000;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.news-image-content__details-btn::before {
+  content: url('./assets/lightning.png');
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-40%);
+}
+
+.news__title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px 15px;
+}
+
+.news-title {
+  font-size: 1.1rem;
+  color: #4e4e4e;
+  text-decoration: none;
+}
+
+.news__url {
+  font-size: 0.8rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.news__social-actions-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.social-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-actions__likes,
+.comments__icon,
+.reposts__icon {
+  cursor: pointer;
+}
+
+.social-actions__likes,
+.social-actions__comments,
+.social-actions__reposts,
+.social-actions__views {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.views__count {
+  font-size: 0.85rem;
+  color: #b4b4b4;
+}
+
+.wrap-loading-prev-news {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 35px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  background-color: rgba(0, 74, 143, 0.2);
+}
+
+.loading-prev-news-btn {
+  width: 100%;
+  height: 100%;
+  border: none;
+  text-shadow: 0 0 1px #8487ad;
+  color: #3f4174;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.loader-prev-news {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: -24px 0 #ffffff, 24px 0 #ffffff;
+  box-sizing: border-box;
+  background: #ffffff;
+  animation: shadowPulse 2s linear infinite;
+}
+
+@keyframes shadowPulse {
+  33% {
+    background: #FFF;
+    box-shadow: -14px 0 #c2c6ff, 14px 0 #ffffff;
+  }
+
+  66% {
+    background: #6e6fa0;
+    box-shadow: -14px 0 #FFF, 14px 0 #ffffff;
+  }
+
+  100% {
+    background: #ffffff;
+    box-shadow: -24px 0 #ffffff, 24px 0 #373a77;
+  }
+}
